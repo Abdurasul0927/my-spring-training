@@ -46,7 +46,9 @@ public class ComputerTest {
 
         Monitor theMonitor2 = container.getBean("monitorSony",Monitor.class); // Default BEAN NAME
         Monitor theMonitor3 = container.getBean("sony",Monitor.class); // Custom BEAN NAME
-        Monitor theMonitor4 = container.getBean(Monitor.class); // Custom BEAN NAME
+        Monitor theMonitor4 = container.getBean(Monitor.class); // @Primary
+
+
 
 
 
