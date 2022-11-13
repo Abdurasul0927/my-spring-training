@@ -17,14 +17,15 @@ public class StudentController {
 
         return "student/register";
     }
-    @RequestMapping("/drop") //localhost:8080/student/drop
-    public String drop(){
-        return "student/register";
-    }
-    @RequestMapping("/welcome") //localhost:8080/student/welcome?name=Ozzy
-    public String welcome(@RequestParam String name){
+//    @RequestMapping("/drop") //localhost:8080/student/drop
+//    public String drop(){
+//        return "student/register";
+//    }
 
-        System.out.println(name);
+    @RequestMapping("/welcome") //localhost:8080/student/welcome?name=Ozzy
+    public String welcome(){
+
+
         return "student/welcome";
     }
 }
