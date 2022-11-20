@@ -29,10 +29,11 @@ public class MentorController {
     }
 
     @PostMapping("/confirm")
-    public String submitForm(@ModelAttribute("mentor") Mentor mentor){
+    public String submitForm(@ModelAttribute("mentor") Mentor mentor,Model model){
 
-        //how can I access to "mentor" attribute in this method
-        return "mentor/mentor-confirmation";
+    //    return "mentor/mentor-register";
+
+        return "redirect:/mentor/register";
     }
 
 }
