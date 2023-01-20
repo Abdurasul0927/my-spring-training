@@ -47,20 +47,19 @@ public interface MovieRepository extends JpaRepository<Movie, Long> {
     // ------------------- Native QUERIES ------------------- //
 
     //Write a native query that returns a movie by name
-    @Query(value = "SELECT * FROM movie WHERE name = ?1",nativeQuery = true)
-    List<Movie> retrieveByName(@Param("name") String name); //    Optional<Movie> retrieveByName(@Param("name") String name);
+    @Query(value = "SELECT * FROM movie WHERE name = ?1", nativeQuery = true)
+    List<Movie> retrieveByName(@Param("name") String name);  // Optional<Movie> retrieveByName(@Param("name") String name);
 
     //Write a native query that return the list of movies in a specific range of prices
-    @Query(value = "SELECT * FROM movie WHERE price BETWEEN ?1 AND ?2",nativeQuery = true)
+    @Query(value = "SELECT * FROM movie WHERE price BETWEEN ?1 AND ?2", nativeQuery = true)
     List<Movie> retrieveByPriceRange(@Param("price1") BigDecimal price1, @Param("price2") BigDecimal price2);
 
-
     //Write a native query to return all movies where duration exists in the range of duration
-    @Query(value = "SELECT * FROM movie WHERE duration IN ?1",nativeQuery = true)
-    List<Movie> retrieveByDurationInRange(@Param("durations")List<Integer> durations);
+    @Query(value = "SELECT * FROM movie WHERE duration IN ?1", nativeQuery = true)
+    List<Movie> retrieveByDurationInRange(@Param("durations") List<Integer> durations);
 
     //Write a native query to list the top 5 most expensive movies
-    @Query(value = "SELECT * FROM movie ORDER BY price DESC LIMIT 5",nativeQuery = true)
+    @Query(value = "SELECT * FROM movie ORDER BY price DESC LIMIT 5", nativeQuery = true)
     List<Movie> top5ExpensiveMovies();
 
 
